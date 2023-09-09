@@ -1,0 +1,10 @@
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #222;
+    color: #000000; /* Change this to a color that is visible in dark mode */
+  }
+  
+  /* Adjust other styles for dark mode as needed */
+  body.dark-mode header {
+    background-color: #111;
+  }

@@ -1,111 +1,134 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ryan Cracks</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="dark-mode.css"> <!-- Link to the separate CSS file for dark mode -->
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      margin: 0;
-      padding: 0;
+    /* Add styles for the scroll bar */
+    :root {
+      --scrollbar-width: 10px; /* Set the width of the scroll bar */
+      --scrollbar-track-color: #f2f2f2; /* Set the track color */
+      --scrollbar-thumb-color: #888; /* Set the thumb color */
+      --scrollbar-thumb-hover-color: #555; /* Set the thumb color on hover */
+      --scrollbar-thumb-rounded: 5px; /* Set the border-radius for the thumb */
+    }
+
+    /* Style for the scroll bar */
+    ::-webkit-scrollbar {
+      width: var(--scrollbar-width);
+    }
+
+    /* Track style */
+    ::-webkit-scrollbar-track {
+      background-color: var(--scrollbar-track-color);
+    }
+
+    /* Thumb style */
+    ::-webkit-scrollbar-thumb {
+      background-color: var(--scrollbar-thumb-color);
+      border-radius: var(--scrollbar-thumb-rounded);
+    }
+
+    /* Thumb hover style */
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: var(--scrollbar-thumb-hover-color);
     }
     
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
+    /* Rest of your existing styles */
+    /* ... */
     
-    h1 {
-      margin: 0;
-    }
-    
-    main {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-      background-color: #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    
-    /* Add this CSS code below the existing styles */
-    
-    /* Style the game list */
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-    
-    li {
-      margin-bottom: 20px;
-      display: flex;
-      align-items: center;
-    }
-    
-    /* Set a specific width and height for the images to make them rectangular */
-    img {
-      width: 200px; /* Adjust the width as needed */
-      height: 100px; /* Adjust the height as needed */
-      margin-right: 20px;
-    }
-    
-    a {
-      color: #333;
-      text-decoration: none;
-    }
-    
-    a:hover {
-      text-decoration: underline;
-    }
-    
-    /* Add this CSS code for the footer */
-    footer {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-      font-size: 14px;
+    /* Add styles for the search bar */
+    .search-bar {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-image: url('Photos/search-icon.png'); /* Path to your search icon image */
+      background-size: 20px 20px; /* Adjust the size of the icon */
+      background-repeat: no-repeat;
+      background-position: 10px center;
+      padding-left: 40px; /* Ensure space for the icon */
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Ryan Cracks</h1>
+    <input type="text" class="search-bar" id="search-bar" placeholder="Search"> <!-- Add the search bar input -->
+    <button id="mode-toggle">Dark Mode</button>
   </header>
-  
+
   <main>
-    <ul>
-      <li>
-        <img src="Photos\photoshop-beta-app-logo.jpg" alt="Photoshop (Beta) Crack">
-        <div>
+    <!-- Your existing content -->
+    <ul class="game-list">
+      <li class="game-item">
+        <img src="Photos\photoshop-beta-app-logo.jpg" alt="Photoshop (Beta) Crack" class="game-image">
+        <div class="game-info">
           <h3>Photoshop (Beta) Crack</h3>
-          <p>Photoshop (Beta) is an advanced image editing software developed by Adobe. It is a pre-release version of Photoshop that allows users to test out new features and provide feedback to Adobe before the official release. Photoshop (Beta) offers a wide range of powerful tools and functionalities for editing and manipulating images. Users can perform tasks such as retouching photos, creating digital artwork, compositing multiple images, applying filters and effects, and much more. The software utilizes advanced algorithms and artificial intelligence to enhance productivity and provide innovative features like Generative Fill and AI-powered editing tools. Photoshop (Beta) is designed for professional photographers, graphic designers, and digital artists who require precise control and creative freedom in their image editing workflow.</p>
-          <a href="https://store6.gofile.io/download/692f306b-e266-427b-be70-c3e42fdc9311/photoshop%20beta.zip">Download Photoshop (Beta) Crack</a>
+          <p>
+            Photoshop (Beta) is an advanced image editing software developed by Adobe. It is a pre-release version of Photoshop that allows users to test out new features and provide feedback to Adobe before the official release. Photoshop (Beta) offers a wide range of powerful tools and functionalities for editing and manipulating images. Users can perform tasks such as retouching photos, creating digital artwork, compositing multiple images, applying filters and effects, and much more. The software utilizes advanced algorithms and artificial intelligence to enhance productivity and provide innovative features like Generative Fill and AI-powered editing tools. Photoshop (Beta) is designed for professional photographers, graphic designers, and digital artists who require precise control and creative freedom in their image editing workflow.
+          </p>
+          <a class="download-link" href="https://store6.gofile.io/download/692f306b-e266-427b-be70-c3e42fdc9311/photoshop%20beta.zip">Download Photoshop (Beta) Crack</a>
         </div>
       </li>
-      <li>
-        <img src="game2.jpg" alt="Game 2">
-        <div>
+      <li class="game-item">
+        <img src="game2.jpg" alt="Game 2" class="game-image">
+        <div class="game-info">
           <h3>Game 2</h3>
-          <p>Description of Game 2</p>
-          <a href="game2.zip">Download Game 2</a>
+          <p>Description of Game 2 goes here.</p>
+          <a class="download-link" href="game2.zip">Download Game 2</a>
         </div>
       </li>
-      <li>
-        <img src="game3.jpg" alt="Game 3">
-        <div>
+      <li class="game-item">
+        <img src="game3.jpg" alt="Game 3" class="game-image">
+        <div class="game-info">
           <h3>Game 3</h3>
-          <p>Description of Game 3</p>
-          <a href="game3.zip">Download Game 3</a>
+          <p>Description of Game 3 goes here.</p>
+          <a class="download-link" href="game3.zip">Download Game 3</a>
         </div>
       </li>
       <!-- Add more game items as needed -->
     </ul>
   </main>
-  
+
   <footer>
     &copy; 2023 Ryan Cracks. All rights reserved.
   </footer>
+
+  <script>
+    const modeToggle = document.getElementById("mode-toggle");
+    const body = document.body;
+    const searchBar = document.getElementById("search-bar");
+
+    modeToggle.addEventListener("click", () => {
+      if (body.classList.contains("dark-mode")) {
+        // Switch to light mode
+        body.classList.remove("dark-mode");
+        modeToggle.textContent = "Dark Mode";
+      } else {
+        // Switch to dark mode
+        body.classList.add("dark-mode");
+        modeToggle.textContent = "Light Mode";
+      }
+    });
+
+    // Add event listener for the search bar input
+    searchBar.addEventListener("input", () => {
+      const searchText = searchBar.value.toLowerCase();
+      const gameItems = document.querySelectorAll(".game-item");
+
+      gameItems.forEach((item) => {
+        const gameTitle = item.querySelector("h3").textContent.toLowerCase();
+
+        if (gameTitle.includes(searchText)) {
+          item.style.display = "flex"; // Show the item if it matches the search
+        } else {
+          item.style.display = "none"; // Hide the item if it doesn't match the search
+        }
+      });
+    });
+  </script>
 </body>
 </html>
